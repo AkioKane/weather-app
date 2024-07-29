@@ -1,0 +1,25 @@
+:root {
+  --bg-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  min-height: 100px;
+}
+
+.main {
+  min-height: 100vh;
+}
