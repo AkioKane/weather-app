@@ -1,5 +1,7 @@
 :root {
-  --bg-color: white;
+  --bg-color: #fafafa;
+  --app-color: #343a40;
+  --size-header: 4em;
 }
 
 * {
@@ -8,18 +10,47 @@
   box-sizing: border-box;
 }
 
-body {
+.main {
   background-color: var(--bg-color);
+  min-height: 100vh;
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  height: 10vh;
-  min-height: 100px;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+  height: var(--size-header);
+  background-color: var(--app-color);
 }
 
-.main {
-  min-height: 100vh;
+header h1 {
+  display: inline;
+  color: white;
+  font-family: sans-serif;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  border: none;
+  border-radius: 3px 0 0 3px;
+  padding: 10px;
+  height: 2em;
+}
+
+.input-group button {
+  border: none;
+  border-radius: 0 3px 3px 0;
+  height: 2em;
+  width: 5em;
+  color: white;
+  font-family: inherit, sans-serif;
+  font-weight: 500;
+  background-color: rgb(250, 116, 67);
 }
