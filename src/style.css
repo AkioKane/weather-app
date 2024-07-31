@@ -1,7 +1,7 @@
 :root {
   --bg-color: #fafafa;
   --app-color: #343a40;
-  --size-header: 4em;
+  --size-header: 6em;
 }
 
 * {
@@ -29,7 +29,7 @@ header h1 {
   color: white;
   font-family: sans-serif;
   margin-left: 2em;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 header div {
@@ -41,13 +41,17 @@ header div {
   border: none;
   border-radius: 3px 0 0 3px;
   padding: 10px;
-  height: 2em;
+  height: 2.5em;
+}
+
+.input-group input:focus {
+  border: none;
 }
 
 .input-group button {
   border: none;
   border-radius: 0 3px 3px 0;
-  height: 2em;
+  height: 2.5em;
   width: 5em;
   color: white;
   font-family: inherit, sans-serif;
