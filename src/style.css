@@ -2,6 +2,7 @@
   --bg-color: #fafafa;
   --app-color: #343a40;
   --size-header: 6em;
+  --size-info: auto;
 }
 
 * {
@@ -57,4 +58,25 @@ header div {
   font-family: inherit, sans-serif;
   font-weight: 500;
   background-color: rgb(250, 116, 67);
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--size-info);
+}
+
+.info .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 80%;
+  margin-top: 1.5em;
+}
+
+.info .container .head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
