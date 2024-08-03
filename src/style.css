@@ -11,6 +11,27 @@
   box-sizing: border-box;
 }
 
+h1, h3, h4, h5 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 500;
+}
+
 .main {
   background-color: var(--bg-color);
   min-height: 100vh;
@@ -79,4 +100,31 @@ header div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.info .panel {
+  display: flex;
+  overflow: auto;
+  border-top: 1px solid #a6a8ac;
+  border-bottom: 1px solid #a6a8ac;
+  gap: 1em;
+}
+
+.info .panel .hours-weather {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 7em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.info .panel .hours-weather * {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+.weather-panel {
+  font-size: 1.5rem;
 }

@@ -15,8 +15,10 @@ function getDayInfo(data, location, num=0) {
   const min = day.tempmin
   const weather = day.preciptype[0]
   const name = location
+  const hours = day.hours
 
   loadHead(name, temp, max, min, weather)
+  loadHoursWeather(hours)
 
   return console.log("Options", day)
 }
@@ -39,6 +41,39 @@ function loadHead(name, temp, max, min, preciptype) {
   headMax.innerHTML = maxCelsium
   headMin.innerHTML = minCelsium
   headWeather.innerHTML = weather
+}
+
+function loadHoursWeather(data) {
+  const hours = document.querySelectorAll(".hours-weather")
+  console.log(data)
+
+  let i = 0
+
+  hours.forEach(hour => {
+    // const clock = document.querySelector(".clock-panel")
+    // const weather = document.querySelector(".weather-panel")
+    // const temperature = document.querySelector(".temp-panel")
+    const datetime = data[i].datetime
+    const preciptype = data[i].conditions
+    const temp = data[i].temp
+
+    const clock = document.createElement("h5")
+    clock.classList.add("clock-panel")
+    clock.innerHTML = datetime.charAt(0) + datetime.charAt(1)
+    hour.appendChild(clock)
+
+    const weather = document.createElement("h1")
+    weather.classList.add("weather-panel")
+    weather.innerHTML = preciptype
+    hour.appendChild(weather)
+
+    const temperature = document.createElement("h5")
+    temperature.classList.add("temp-panel")
+    temperature.innerHTML = temp
+    hour.appendChild(temperature)
+
+    i++
+  })
 }
 
 function eventInput() {
