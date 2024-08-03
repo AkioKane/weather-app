@@ -50,12 +50,9 @@ function loadHoursWeather(data) {
   let i = 0
 
   hours.forEach(hour => {
-    // const clock = document.querySelector(".clock-panel")
-    // const weather = document.querySelector(".weather-panel")
-    // const temperature = document.querySelector(".temp-panel")
     const datetime = data[i].datetime
     const preciptype = data[i].conditions
-    const temp = data[i].temp
+    const temp = (((data[i].temp) - 32) / 1.8).toFixed(0) + "°"
 
     const clock = document.createElement("h5")
     clock.classList.add("clock-panel")
@@ -81,9 +78,7 @@ function eventInput() {
   const btn = document.querySelector(".search-city")
 
   btn.addEventListener("click", () => {
-    console.log("active")
     if (input.value !== "") {
-      console.log("active-find")
       getWeatherData(input.value)
       input.value = ""
     }
